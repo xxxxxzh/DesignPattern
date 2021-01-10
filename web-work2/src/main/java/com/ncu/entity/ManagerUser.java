@@ -1,6 +1,11 @@
 package com.ncu.entity;
 
 public class ManagerUser extends User {
+    @Override
+    public User clone() {
+        return super.clone();
+    }
+
     public ManagerUser() {
         super();
     }

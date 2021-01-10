@@ -1,5 +1,7 @@
 package com.ncu.entity;
 
+import java.util.List;
+
 public class SaleManager extends AbstractPosition {
     public SaleManager() {
         super();
@@ -45,5 +47,31 @@ public class SaleManager extends AbstractPosition {
             System.out.println("没有权限");
             return 0;
         }
+    }
+    @Override
+    public int add_commodity(commodity cmd) {
+        //System.out.println("没有权限");
+        System.out.println("添加商品：" + cmd.toString());
+        return 0;
+    }
+
+    @Override
+    public int del_commodity(commodity cmd) {
+        //System.out.println("没有权限");
+        System.out.println("删除商品：" + cmd.toString());
+        return 0;
+    }
+
+    @Override
+    public int update_commodity(commodity a, commodity b) {
+        System.out.println("修改商品：" + a.toString());
+        System.out.println("新的商品：" + b.toString());
+        return 0;
+    }
+
+    @Override
+    public List<commodity> getAllCommodity() {
+        System.out.println("查看部门 " + getPosition() + " 所管理的商品");
+        return null;
     }
 }

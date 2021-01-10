@@ -49,6 +49,7 @@ public abstract class User implements Cloneable {
         User object = null;
         try {
             object = (User) super.clone();
+            System.out.println("复制了一个员工");
         } catch (CloneNotSupportedException exception) {
             System.err.println("Not suppory cloneable");
         }
@@ -160,5 +161,10 @@ public abstract class User implements Cloneable {
     public void setAddress(String address) {
         this.address = address;
     }
-
+    public String getDepartment() {
+        return state.getDepartment();
+    }
+    public String getPosition() {
+        return state.getPosition();
+    }
 }
