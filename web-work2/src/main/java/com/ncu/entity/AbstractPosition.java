@@ -1,5 +1,9 @@
 package com.ncu.entity;
 
+/**
+ * 状态模式
+ * 抽象职位类
+ */
 public abstract class AbstractPosition {
     private String department;
     private String position;

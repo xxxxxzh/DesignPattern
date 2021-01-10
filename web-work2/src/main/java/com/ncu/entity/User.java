@@ -15,7 +15,9 @@ public abstract class User implements Cloneable {
     private String phone;
     private String address;
     private AbstractPosition state;
-
+    public User() {
+        ;
+    }
     public User(String username, String password, int sex, String birthday, String registration_date, String grade, String qq, String wechat, String phone, String address, AbstractPosition state) {
         this.username = username;
         this.password = password;
