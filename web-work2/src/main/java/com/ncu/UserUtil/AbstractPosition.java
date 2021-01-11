@@ -1,4 +1,8 @@
-package com.ncu.entity;
+package com.ncu.UserUtil;
+
+
+
+import com.ncu.CommodityUtil.commodity;
 
 import java.util.List;
 
@@ -18,7 +22,7 @@ public abstract class AbstractPosition {
 
     public abstract int add_commodity(commodity cmd);
     public abstract int del_commodity(commodity cmd);
-    public abstract int update_commodity(commodity a,commodity b);
+    public abstract int update_commodity(commodity a, commodity b);
     public abstract List<commodity> getAllCommodity();
 
     public String getDepartment() {

@@ -1,6 +1,7 @@
-package com.ncu.Util;
+package com.ncu.CommodityUtil;
 
-import com.ncu.entity.User;
+
+import com.ncu.UserUtil.User;
 
 /**
  * 按月汇总

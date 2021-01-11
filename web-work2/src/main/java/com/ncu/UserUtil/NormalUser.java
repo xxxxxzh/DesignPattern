@@ -1,4 +1,4 @@
-package com.ncu.entity;
+package com.ncu.UserUtil;
 
 public class NormalUser extends User {
     @Override

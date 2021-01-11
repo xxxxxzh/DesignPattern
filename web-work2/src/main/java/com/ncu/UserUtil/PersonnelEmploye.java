@@ -1,8 +1,10 @@
-package com.ncu.entity;
+package com.ncu.UserUtil;
+
+import com.ncu.CommodityUtil.commodity;
 
 import java.util.List;
 
-public class InfoEmploye extends AbstractPosition {
+public class PersonnelEmploye extends AbstractPosition {
     @Override
     public String getDepartment() {
         return super.getDepartment();
@@ -23,9 +25,9 @@ public class InfoEmploye extends AbstractPosition {
         super.setPosition(position);
     }
 
-    public InfoEmploye() {
+    public PersonnelEmploye() {
         super();
-        super.setDepartment("信息部门");
+        super.setDepartment("人事部门");
         super.setPosition("普通员工");
     }
     public int addEmploye(User user) {
@@ -34,25 +36,28 @@ public class InfoEmploye extends AbstractPosition {
     }
     public int delEmploye(User user) {
         System.out.println("没有权限");
-        return 0;
+        return 1;
     }
     public int approve_to_addEmploye(User user) {
-        System.out.println("没有权限");
-        return 0;
+        AbstractPosition position = user.getState();
+        System.out.println("同意添加用户：\n" + user.getUsername() + "\n部门: "
+                + position.getDepartment() + "\n职位：" + position.getPosition());
+        return 1;
     }
     public int approve_to_delEmploye(User user) {
-        System.out.println("没有权限");
-        return 0;
+        AbstractPosition position = user.getState();
+        System.out.println("同意删除用户：\n" + user.getUsername() + "\n部门: "
+                + position.getDepartment() + "\n职位：" + position.getPosition());
+        return 1;
     }
     public int apply_to_addEmploye(User user) {
         System.out.println("没有权限");
-        return 0;
+        return 1;
     }
     public int apply_to_delEmploye(User user) {
         System.out.println("没有权限");
-        return 0;
+        return 1;
     }
-
     @Override
     public int add_commodity(commodity cmd) {
         System.out.println("没有权限");

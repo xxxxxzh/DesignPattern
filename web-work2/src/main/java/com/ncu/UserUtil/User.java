@@ -1,4 +1,4 @@
-package com.ncu.entity;
+package com.ncu.UserUtil;
 
 public abstract class User implements Cloneable {
     /**

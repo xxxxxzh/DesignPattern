@@ -1,4 +1,4 @@
-package com.ncu.entity;
+package com.ncu.UserUtil;
 
 /**
  * 抽象工厂类：用户对象生成工厂

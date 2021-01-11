@@ -1,4 +1,7 @@
-package com.ncu.entity;
+package com.ncu.UserUtil;
+
+
+import com.ncu.CommodityUtil.commodity;
 
 import java.util.List;
 

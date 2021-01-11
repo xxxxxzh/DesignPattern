@@ -1,4 +1,4 @@
-package com.ncu.entity;
+package com.ncu.CommodityUtil;
 
 /**
  * 商品实体

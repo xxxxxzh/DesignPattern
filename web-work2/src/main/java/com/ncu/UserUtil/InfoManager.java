@@ -1,8 +1,10 @@
-package com.ncu.entity;
+package com.ncu.UserUtil;
+
+import com.ncu.CommodityUtil.commodity;
 
 import java.util.List;
 
-public class SaleEmploye extends AbstractPosition {
+public class InfoManager extends AbstractPosition {
     @Override
     public String getDepartment() {
         return super.getDepartment();
@@ -23,10 +25,10 @@ public class SaleEmploye extends AbstractPosition {
         super.setPosition(position);
     }
 
-    public SaleEmploye() {
+    public InfoManager() {
         super();
-        super.setDepartment("销售部门");
-        super.setPosition("普通员工");
+        super.setDepartment("信息部门");
+        super.setPosition("经理");
     }
     public int addEmploye(User user) {
         System.out.println("没有权限");
@@ -45,24 +47,41 @@ public class SaleEmploye extends AbstractPosition {
         return 0;
     }
     public int apply_to_addEmploye(User user) {
-        System.out.println("没有权限");
-        return 0;
+        AbstractPosition position = user.getState();
+        if (position != null && position.getDepartment().equals(super.getDepartment())
+                && position.getPosition().equals("普通员工")) {
+            System.out.println("申请添加用户：\n" + user.getUsername() + "\n部门: "
+                    + position.getDepartment() + "\n职位：" + position.getPosition());
+            return 1;
+        } else {
+            System.out.println("没有权限");
+            return 0;
+        }
     }
     public int apply_to_delEmploye(User user) {
-        System.out.println("没有权限");
-        return 0;
+        AbstractPosition position = user.getState();
+        if (position != null && position.getDepartment().equals(super.getDepartment())
+                && position.getPosition().equals("普通员工")) {
+            System.out.println("申请删除用户：\n" + user.getUsername() + "\n部门: "
+                    + position.getDepartment() + "\n职位：" + position.getPosition());
+            return 1;
+        } else {
+            System.out.println("没有权限");
+            return 0;
+        }
     }
+
     @Override
     public int add_commodity(commodity cmd) {
-        System.out.println("没有权限");
-        //System.out.println("添加商品：" + cmd.toString());
+        //System.out.println("没有权限");
+        System.out.println("添加商品：" + cmd.toString());
         return 0;
     }
 
     @Override
     public int del_commodity(commodity cmd) {
-        System.out.println("没有权限");
-        //System.out.println("删除商品：" + cmd.toString());
+        //System.out.println("没有权限");
+        System.out.println("删除商品：" + cmd.toString());
         return 0;
     }
 

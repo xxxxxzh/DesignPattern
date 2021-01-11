@@ -1,4 +1,4 @@
-package com.ncu.entity;
+package com.ncu.UserUtil;
 
 /**
  * 具体工厂类：普通用户工厂
